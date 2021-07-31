@@ -1,0 +1,44 @@
+﻿@model GuestDemo1.Models.Guest
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Guest</legend>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.GuestNo)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.GuestNo)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.GuestName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.GuestName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.PhoneNumber)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new {  id=Model.GuestNo  }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
